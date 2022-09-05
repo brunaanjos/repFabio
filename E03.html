@@ -1,0 +1,28 @@
+<script>
+    //PROBLEMA: Vínculo empregatício
+    //Peça para o usuário informar qual a sua remuneração mensal (salário). Peça também para o usuário informar qual cargo que ocupa e quantas horas trabalha por dia.
+    //Se o usuário for "Estagiário", e trabalhar até 6 horas diárias (inclusive), o programa deverá informar quanto recebe por hora.
+    //Se o usuário for "Estagiário", e trabalhar mais que 6 horas diárias, o programa deverá apresentar a mensagem "Precisa ser contratado", além de calcular um adicional de 50% (50/100) na sua remuneração. Apresente também quanto recebe por hora, já com o adicional previsto.
+    //Se o usuário for "Programador" e trabalhar até 8 horas diárias (inclusive), o programa deverá informar quanto recebe por hora.
+    //Se o usuário for "Programador" e trabalhar mais que 8 horas diárias, o programa deverá calcular um adicional de 30% (30/100) na sua remuneração. Apresente também quanto recebe por hora, já com o adicional previsto.
+
+    const salario = Number(prompt("Informe seu salario"))
+    const cargo = prompt("Qual cargo você ocupa ? (P- programador | E-estagiario)")
+    const horasTrabalhadas = Number(prompt("Quantas horas você trabalha por dia ?"))
+
+    let estagiarioContratado = salario * 0.5
+    let ProContratado = salario * 0.3
+
+    if (cargo === "E" && horasTrabalhadas === 6) {
+        alert(`Você recebe ${salario / horasTrabalhadas} reais por hora`)
+
+    } else if (cargo === "E" && horasTrabalhadas > 6) {
+        alert(`Precisa ser contratado ! ganhará ${estagiarioContratado / horasTrabalhadas} por hora`)
+
+    } else if (cargo === "P" && horasTrabalhadas <= 8) {
+        alert(`Você recebe ${salario / horasTrabalhadas} reais por hora`)
+
+    } else if (cargo === "P" && horasTrabalhadas > 8) {
+        alert(`Precisa ser contratado ! ganhará ${ProContratado / horasTrabalhadas} por hora`)
+    }
+</script>
